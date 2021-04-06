@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front Page Prototype</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="master.css">
+</head>
+<body class = "background">
+    <main>
+        <section class = "welcome_title">
+            <h1 class = "title-fade-in">Welcome to Serenity</h1>
+            <div>
+                <h2 class = "name-title">Pick a theme</h2>
+                <br>
+                <a class = "button1" href="forest.html">Nature</a>
+                <a class = "button2" href="chill.html">Chill</a>
+                <a class = "button3" href="cafe.html">Cafe</a>
+            </div>
+        </section>
+    </main>
+    
+    <script type="text/javascript">
+        const buttons = document.querySelectorAll('a');
+        buttons.forEach(btn =>{
+            btn.addEventListener('click', function(e) {
+
+            let x = e.clientX - e.target.offsetLeft;
+            let y = e.clientY - e.target.offsetTop;
+
+            let ripples = document.createElement('span');
+            ripples.style.left = x + 'px';
+            ripples.style.top = y + 'px';
+            this .appendChild(ripples)
+
+            setTimeout(() =>{
+                ripples.remove()
+            },1000); 
+            })
+        })
+    </script>
+</body>
+</html>
+
+

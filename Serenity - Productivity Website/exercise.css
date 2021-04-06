@@ -1,0 +1,160 @@
+/* write when demonstrating changing all styles on the page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+
+  margin: 0;
+  padding: 0;
+  /* at the end, ensure scrolling is smooth when clicking nav links */
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+.title {
+  color: #ffffff;
+  font-size: 80px;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  color: #ffffff;
+  font-size: 64px;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+.title {
+  font-family: 'Montserrat', sans-serif;
+}
+section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vision-wrapper {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  text-align: top;
+  color: #242424;
+  font-size: medium;
+  
+}
+
+.vision-wrapper div {
+  margin-top: 16px;
+  margin-left: 500px;
+  margin-right: 500px;
+  text-align: center;
+  font-size: medium;
+
+}
+#vision {
+  background:  #ffffff;
+
+}
+#yoga {
+  background:  #846077;
+}
+
+#about {
+  background: url("./img1/gymBG.png");
+}
+
+nav {
+  /* make the text white */
+  color: white;
+  /* ensure that our navbar extends the entire width of the screen */
+  width: 100%;
+  /* navbar is fixed to the top of the screen */
+  position: fixed;
+  /* background color of the navbar is black */
+  background: rgba(0, 0, 0, 0.8);
+  /* the navbar's height is 60px  */
+  height: 60px;
+  z-index: 5;
+
+  
+}
+.nav-bar {
+  /* take 100% of the height of the nav */
+  height: 100%;
+  /* explain space-between, space-evenly, space-around */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* add some padding to the sides */
+  padding: 0 2rem;
+}
+
+/* we want the nav links to take up a 250px width in the navbar */
+.nav-links {
+  width: 500px;
+}
+
+/* take up 100% width of the box defined above */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-links ul li {
+    width: 500px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;   
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.sub-menu-1 {
+    display: none;
+    
+}
+
+ .nav-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: rgb(0,0,0);
+    margin-top: 2px;
+    margin-left: -5px;
+    z-index: 1;
+
+}
+
+.nav-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+.nav-bar ul li:hover .sub-menu-1 ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted #fff;
+  background: solid;
+  border-radius: 0;
+  text-align: left;
+}
+
+.nav-bar ul li:hover .sub-menu-1 ul li:last-child {
+  border-bottom: none;
+}
+
+.nav-bar ul li:hover .sub-menu-1 ul li a:hover {
+  color:rgb(142, 73, 232)
+}

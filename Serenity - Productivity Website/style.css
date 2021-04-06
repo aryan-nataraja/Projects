@@ -1,0 +1,230 @@
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    font-family: 'MuseoModerno', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.welcome_title {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 44px;
+    letter-spacing: -4px;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-title {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: 0px;
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0;
+    animation-name: namePrompt;
+    animation-duration: 2s;
+    animation-delay: 7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes namePrompt { 
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+    
+}
+
+.background {
+    background: url("./Imgs/bridge-dark2.png");
+    background-position-y: 20%;
+    background-size: cover;
+    animation-name: scaleBridge;
+    animation-timing-function: ease-in-out;
+    animation-duration:3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scaleBridge {
+    0% {
+        background-position-y: 20%;
+    }
+    100% {
+        background-position-y: 8%;
+    }
+}
+
+/*fade in animation, the additional code below ensures that the fade in 
+works on different web browsers*/
+.title-fade-in {
+    animation: fadeIn ease 6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    
+}
+@keyframes fadeIn {
+    0% {
+      opacity:0%;
+    }
+    50% {
+      opacity:40%;
+      transform: scale(1);
+    }
+    75% {
+        opacity: 75%;
+    }
+    100% {
+        transform: scale(0.7);
+        opacity: 100%;
+    }
+}
+
+
+/*button styles*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /*height from the top */
+    flex-direction: row;
+    background: #040d15;
+}
+a 
+{
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    margin: 10px 10px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    background: linear-gradient(90deg,#3fbf3f, #3a4439);
+    opacity: 0%;
+    overflow: hidden; /*stops the ripple from leaking onto bg*/
+}
+a:nth-child(3)
+{
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
+a:nth-child(4)
+{
+    background: linear-gradient(90deg, orange, pink);
+}
+span 
+{
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate 
+{
+    0%
+    {
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100%
+    {
+        width: 500px;
+        height: 500px; 
+        opacity: 0;
+    }
+}
+
+.button1 {
+    animation-timing-function: ease-in-out;
+    animation-name: button1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+}
+
+@keyframes button1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+.button2 {
+    animation-timing-function: ease-in-out;
+    animation-name: button1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 10s;
+}
+
+@keyframes button1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+.button3 {
+    animation-timing-function: ease-in-out;
+    animation-name: button1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 11s;
+}
+
+@keyframes button1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+

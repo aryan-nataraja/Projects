@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+
+        .button1{
+          position: absolute;
+          transform: scale(0.25);
+          bottom: -20px;
+          right: -25px;
+          font-size: 20px;
+          opacity: 1;
+          transition: transform .3s;
+        }
+
+        .button1:hover {
+          transform: scale(0.35);
+        }
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            width: 100%;
+            object-fit: fill;
+            z-index: -1;
+
+        }
+
+        .spotify {
+            position: absolute;
+            top: 100px;
+            right: 16px;
+            opacity: 0.85;
+            z-index: 1;
+            
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="master.css">
+    <title>Video On Click</title>
+</head>
+<body>
+    
+  <nav>
+    <div class="nav-bar">
+      <h1>Serenity</h1>
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html" class="cool-link">Themes</a>
+            <div class="sub-menu-1">
+              <ul>
+                <li> <a href="beach.html">Sunny Vibes</a> </li>
+                <li> <a href="rain.html">Rainy days</a> </li>
+                <li> <a href="fireplace.html">Cold Mornings</a> </li>
+              </ul>
+
+            </div>
+          </li>
+          <li><a href="meditate.html" class="cool-link">Meditate</a></li>
+          <li><a href="exercise.html" class="cool-link">Exercise</a></li>
+          <li><a href="about.html" class="cool-link">About Us</a></li>
+          <li><img src="./Images/resizefinal_icon.png" onclick="openFullscreen();" width="100px"
+            height="100" class="button1" alt=""></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+    <section class="header">
+      <div class="container1">
+        <video autoplay loop muted>
+          <source src="./Videos/chill.mp4" type="video/mp4">
+      </video>
+      </div>
+
+</section>
+
+<div class="container">
+<div class="spotify">
+<iframe src="https://open.spotify.com/embed/playlist/147MsyjA0Bd57ZmxUDtLxH" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+
+<div class="wrapper">
+<header>Todo List</header>
+<div class="inputField">
+<input type="text" placeholder="Add your new todo">
+<button><i class="fas fa-plus"></i></button>
+</div>
+<ul class="todoList"></ul>
+<div class="footer">
+<span>You have <span class="pendingTasks"></span> pending tasks</span>
+<button>Clear All</button>
+</div>
+</div>
+
+<script src="todolist.js"></script>
+
+
+<div class="clock">
+<body onload="initClock()">
+
+<div class="datetime">
+<div class="date">
+<span id="dayname">Day</span>,
+<span id="month">Month</span>
+<span id="daynum">00</span>,
+<span id="year">Year</span>
+</div>
+<div class="time">
+<span id="hour">00</span>:
+<span id="minutes">00</span>:
+<span id="seconds">00</span>
+<span id="period">AM</span>
+</div>
+</div>
+
+<script src="clock.js"></script>
+
+</body>
+</div>
+
+
+
+
+
+<script>
+var elem = document.documentElement;
+function openFullscreen() {
+if (elem.requestFullscreen) {
+elem.requestFullscreen();
+} else if (elem.webkitRequestFullscreen) { 
+elem.webkitRequestFullscreen();
+} else if (elem.msRequestFullscreen) { 
+elem.msRequestFullscreen();
+}
+}
+
+function closeFullscreen() {
+if (document.exitFullscreen) {
+document.exitFullscreen();
+} else if (document.webkitExitFullscreen) { 
+document.webkitExitFullscreen();
+} else if (document.msExitFullscreen) { 
+document.msExitFullscreen();
+}
+}
+</script>
+</div>
+    
+
+      
+</body>
+</html>

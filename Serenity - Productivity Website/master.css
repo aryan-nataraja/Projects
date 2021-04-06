@@ -1,0 +1,19 @@
+.container {
+    animation: transitionIn 7s;
+}
+
+.container1 {
+    animation: transitionIn 2s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+   
+    }
+
+    to {
+        opacity: 1;
+    
+    }
+}
